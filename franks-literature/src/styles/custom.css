@@ -1,0 +1,182 @@
+/* FRANK'S LITERATURE · Tema andaluz */
+:root {
+  --sl-font: Georgia, 'Times New Roman', serif;
+  --fl-paper: #f7eedc;
+  --fl-paper-deep: #eee0c9;
+  --fl-ink: #36271a;
+  --fl-muted: #6d5844;
+  --fl-terra: #97512d;
+  --fl-olive: #66734c;
+}
+:root[data-theme='light'] {
+  --sl-color-bg: #f7eedc;
+  --sl-color-bg-nav: #f1e3cd;
+  --sl-color-bg-sidebar: #f1e3cd;
+  --sl-color-white: #36271a;
+  --sl-color-text: #604b37;
+  --sl-color-accent-low: #efddc6;
+  --sl-color-accent: #97512d;
+  --sl-color-accent-high: #6c381f;
+  --sl-color-hairline: #d5bfa2;
+}
+:root[data-theme='dark'] {
+  --sl-color-bg: #29251e;
+  --sl-color-bg-nav: #302a22;
+  --sl-color-bg-sidebar: #302a22;
+  --sl-color-white: #fff0d6;
+  --sl-color-text: #ead7ba;
+  --sl-color-accent-low: #463323;
+  --sl-color-accent: #e3b782;
+  --sl-color-accent-high: #f7dbb4;
+  --sl-color-hairline: #594b3a;
+}
+.site-title, h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
+.site-title { font-weight: 700; }
+header.header { border-bottom: 1px solid var(--sl-color-hairline); }
+
+/* La portada ocupa todo el ancho disponible en Starlight */
+.fl-home { font-family: Georgia, 'Times New Roman', serif; color: var(--fl-ink); }
+:root[data-theme='dark'] .fl-home { color: #f8e9d1; }
+.fl-home * { box-sizing: border-box; }
+.fl-home h1, .fl-home h2, .fl-home h3, .fl-home p { margin: 0; }
+.fl-home a { text-decoration: none; }
+.fl-hero {
+  display: grid; grid-template-columns: 1fr 1.08fr; align-items: stretch;
+  min-height: 450px; background: #f5e9d4;
+  border-block: 1px solid #dac3a3;
+}
+.fl-hero-copy {
+  padding: clamp(2.1rem, 5vw, 5rem) clamp(1.5rem, 5vw, 5.5rem);
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  background: radial-gradient(circle at 0 10%, #fbf3e7, transparent 65%), #f3e5cf;
+}
+.fl-eyebrow { font: 700 .76rem/1.5 Arial, sans-serif; letter-spacing: .19em; color: #98512d; }
+.fl-hero h1 { font-size: clamp(3rem, 6.1vw, 6rem); letter-spacing: -.045em; line-height: .98; color: #342214; margin: 1.1rem 0 .6rem; }
+.fl-ornament { color: #a57047; letter-spacing: .3em; margin: 1rem 0; }
+.fl-hero p { max-width: 31rem; font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.65; color: #59422f; }
+.fl-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 1.6rem; }
+.fl-home .fl-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .65rem;
+  padding: .9rem 1.15rem; border-radius: 4px; border: 1px solid #98512d;
+  font-size: 1rem; transition: background .2s, transform .2s;
+}
+.fl-button:hover { transform: translateY(-2px); }
+.fl-home .fl-button-primary { color: #fff9ed; background: #97512d; }
+.fl-home .fl-button-outline { color: #713b21; background: transparent; }
+.fl-button-outline:hover { background: #e9d4b8; }
+.fl-hero-photo { min-height: 390px; position: relative; overflow: hidden; background: #bca184; }
+.fl-hero-photo img { display: block; width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: center; }
+.fl-photo-label { position: absolute; bottom: 1.1rem; right: 1.1rem; background: #f4e6d4e8; padding: .65rem .8rem; color: #653c22; font: 700 .62rem Arial, sans-serif; letter-spacing: .12em; }
+.fl-intro { text-align: center; padding: clamp(3rem, 5vw, 5rem) 1.5rem 1.8rem; background: #f7eedc; }
+.fl-intro h2 { font-size: clamp(2rem, 3.5vw, 3.1rem); color: #3c2a1c; margin-top: .65rem; }
+.fl-intro .fl-ornament { margin: .6rem 0 .9rem; }
+.fl-intro p { max-width: 47rem; margin: 0 auto; font-size: 1.08rem; line-height: 1.8; color: #6d5844; }
+.fl-feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.1rem; padding: 1.5rem clamp(1.1rem, 3.5vw, 3.8rem) 4rem; background: #f7eedc; }
+.fl-feature-card { display: grid; grid-template-columns: minmax(90px, .85fr) 1.3fr; gap: 1rem; align-items: center; padding: .9rem; background: #fff8ea; border: 1px solid #e8d7bc; box-shadow: 0 5px 18px #74563718; border-radius: 6px; }
+.fl-feature-art { min-height: 175px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: .8rem; color: #fff2dc; }
+.fl-feature-art span { font-size: 3.5rem; line-height: 1; }
+.fl-feature-art strong { font: 700 .7rem Arial, sans-serif; letter-spacing: .12em; }
+.fl-art-books { background: linear-gradient(140deg,#7c5537,#382719); }
+.fl-art-author { background: linear-gradient(140deg,#9e7651,#64432f); }
+.fl-art-new { background: linear-gradient(140deg,#828768,#47523a); }
+.fl-feature-copy h3 { color: #3c2a1c; font-size: clamp(1.1rem, 1.5vw, 1.5rem); line-height: 1.2; }
+.fl-feature-copy p { font-size: .95rem; line-height: 1.5; color: #65513d; margin: .5rem 0 .9rem; }
+.fl-feature-copy a { font-size: .93rem; color: #99502d; font-weight: bold; }
+.fl-feature-copy a:hover { text-decoration: underline; }
+.fl-quote { min-height: 240px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3rem 1rem; background: linear-gradient(#ebc28e88,#e2b17d88),url('/images/paisaje-atardecer.webp') center/cover; color: #352215; }
+.fl-quote p { font-style: italic; font-size: clamp(1.5rem, 3vw, 2.7rem); line-height: 1.3; }
+.fl-quote span { margin: .8rem 0; color: #86522f; }
+.fl-quote strong { font: 700 .75rem Arial, sans-serif; letter-spacing: .26em; }
+/* Page width: Starlight's splash container */
+[data-has-hero] .fl-home { width: 100%; }
+.sl-markdown-content:has(> .fl-home) { max-width: none; }
+.sl-markdown-content:has(> .fl-home) > .fl-home { margin-top: 0; }
+@media (max-width: 980px) {
+  .fl-feature-grid { grid-template-columns: 1fr; max-width: none; }
+  .fl-feature-card { grid-template-columns: 130px 1fr; }
+}
+@media (max-width: 680px) {
+  .fl-hero { grid-template-columns: 1fr; }
+  .fl-hero-copy { padding: 3rem 1.5rem; }
+  .fl-hero-photo { min-height: 270px; }
+  .fl-feature-card { grid-template-columns: 115px 1fr; }
+  .fl-feature-art { min-height: 145px; }
+  .fl-quote { min-height: 200px; }
+}
+@media (prefers-reduced-motion: reduce) { .fl-home .fl-button { transition: none; } .fl-button:hover { transform: none; } }
+
+/* Enlace del título a la página principal */
+.site-title {
+  cursor: pointer;
+}
+
+/* BIBLIOTECA - PORTADAS INTERACTIVAS */
+
+.biblioteca-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 210px));
+  gap: 3rem;
+  justify-content: start;
+  padding: 2rem 0;
+}
+
+.libro-item {
+  text-align: center;
+  min-width: 0;
+}
+
+.libro-link {
+  display: block;
+  border-radius: 5px;
+  text-decoration: none !important;
+}
+
+.libro-imagen {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 4px 8px 8px 4px;
+
+  box-shadow: 8px 12px 22px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Elevación de la portada */
+
+@media (hover: hover) {
+  .libro-link:hover .libro-imagen {
+    transform: translateY(-15px) scale(1.06);
+
+    box-shadow:
+      12px 25px 35px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.libro-link:focus-visible {
+  outline: 3px solid var(--sl-color-accent);
+  outline-offset: 6px;
+}
+
+.libro-item h3 {
+  margin: 1.3rem 0 0.3rem;
+  font-size: 1.2rem;
+}
+
+.libro-item p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .libro-imagen {
+    transition: none;
+  }
+
+  .libro-link:hover .libro-imagen {
+    transform: none;
+  }
+}
