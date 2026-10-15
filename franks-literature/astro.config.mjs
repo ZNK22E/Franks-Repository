@@ -4,7 +4,9 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-	base: '/',
+	site: 'https://znk22e.github.io',
+	base: '/Franks-Repository',
+
 	integrations: [
     starlight({
       title: "Frank's Literature",

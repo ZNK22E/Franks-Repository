@@ -1,64 +1,158 @@
+
 ---
 title: "Frank's Literature"
 description: "Historias y libros escritos por Frank, desde el corazón de Andalucía."
 template: splash
 ---
 
+export const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
 <div class="fl-home">
   <section class="fl-hero" aria-labelledby="fl-hero-title">
     <div class="fl-hero-copy">
       <span class="fl-eyebrow">DESDE EL CORAZÓN DE ANDALUCÍA</span>
-      <h1 id="fl-hero-title">Frank's<br />Literature</h1>
-      <div class="fl-ornament" aria-hidden="true">✦ ─── ✦</div>
-      <p>Historias nacidas entre montañas, campos y recuerdos. Un lugar donde las palabras encuentran su hogar.</p>
+
+      <h1 id="fl-hero-title">
+        Frank's<br />Literature
+      </h1>
+
+      <div class="fl-ornament" aria-hidden="true">
+        ✦ ─── ✦
+      </div>
+
+      <p>
+        Historias nacidas entre montañas, campos y recuerdos.
+        Un lugar donde las palabras encuentran su hogar.
+      </p>
+
       <div class="fl-actions">
-        <a class="fl-button fl-button-primary" href="/libros/">Descubrir las obras <span aria-hidden="true">↗</span></a>
-        <a class="fl-button fl-button-outline" href="/sobre-el-autor/">Conocer al autor <span aria-hidden="true">→</span></a>
+        <a
+          class="fl-button fl-button-primary"
+          href={`${base}libros/`}
+        >
+          Descubrir las obras
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          class="fl-button fl-button-outline"
+          href={`${base}sobre-el-autor/`}
+        >
+          Conocer al autor
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
+
     <div class="fl-hero-photo">
-      <img src="/images/hero-andalucia.webp" alt="Mesa de escritura rústica con libros frente al paisaje montañoso de Andalucía" loading="eager" />
-      <span class="fl-photo-label">UN RINCÓN PARA LEER Y SOÑAR</span>
+      <img
+        src={`${base}images/hero-andalucia.webp`}
+        alt="Mesa de escritura rústica con libros frente al paisaje montañoso de Andalucía"
+        loading="eager"
+      />
+
+      <span class="fl-photo-label">
+        UN RINCÓN PARA LEER Y SOÑAR
+      </span>
     </div>
   </section>
 
   <section class="fl-intro" aria-labelledby="fl-intro-title">
-    <span class="fl-eyebrow">EL RINCÓN DE LAS HISTORIAS</span>
-    <h2 id="fl-intro-title">Bienvenidos a nuestra biblioteca</h2>
-    <div class="fl-ornament" aria-hidden="true">─── ✦ ───</div>
-    <p>Cada obra guarda un pequeño universo esperando ser descubierto. En este espacio reunimos los libros, relatos y palabras de Frank.</p>
+    <span class="fl-eyebrow">
+      EL RINCÓN DE LAS HISTORIAS
+    </span>
+
+    <h2 id="fl-intro-title">
+      Bienvenidos a nuestra biblioteca
+    </h2>
+
+    <div class="fl-ornament" aria-hidden="true">
+      ─── ✦ ───
+    </div>
+
+    <p>
+      Cada obra guarda un pequeño universo esperando ser descubierto.
+      En este espacio reunimos los libros, relatos y palabras de Frank.
+    </p>
   </section>
 
-  <section class="fl-feature-grid" aria-label="Explora Frank's Literature">
+  <section
+    class="fl-feature-grid"
+    aria-label="Explora Frank's Literature"
+  >
     <article class="fl-feature-card">
-      <div class="fl-feature-art fl-art-books" aria-hidden="true"><span>✦</span><strong>LIBROS</strong></div>
+      <div class="fl-feature-art fl-art-books" aria-hidden="true">
+        <span>✦</span>
+        <strong>LIBROS</strong>
+      </div>
+
       <div class="fl-feature-copy">
         <h3>La biblioteca</h3>
-        <p>Un recorrido por las novelas, los relatos y las historias escritas por Frank.</p>
-        <a href="/libros/">Explorar obras <span aria-hidden="true">→</span></a>
+
+        <p>
+          Un recorrido por las novelas, los relatos
+          y las historias escritas por Frank.
+        </p>
+
+        <a href={`${base}libros/`}>
+          Explorar obras
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </article>
+
     <article class="fl-feature-card">
-      <div class="fl-feature-art fl-art-author" aria-hidden="true"><span>✒</span><strong>EL AUTOR</strong></div>
+      <div class="fl-feature-art fl-art-author" aria-hidden="true">
+        <span>✒</span>
+        <strong>EL AUTOR</strong>
+      </div>
+
       <div class="fl-feature-copy">
         <h3>El escritor</h3>
-        <p>Conoce al autor y descubre la pasión que hay detrás de cada historia.</p>
-        <a href="/sobre-el-autor/">Sobre el autor <span aria-hidden="true">→</span></a>
+
+        <p>
+          Conoce al autor y descubre la pasión
+          que hay detrás de cada historia.
+        </p>
+
+        <a href={`${base}sobre-el-autor/`}>
+          Sobre el autor
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </article>
+
     <article class="fl-feature-card">
-      <div class="fl-feature-art fl-art-new" aria-hidden="true"><span>❧</span><strong>RELATOS</strong></div>
+      <div class="fl-feature-art fl-art-new" aria-hidden="true">
+        <span>❧</span>
+        <strong>RELATOS</strong>
+      </div>
+
       <div class="fl-feature-copy">
         <h3>Nuevas historias</h3>
-        <p>Una colección que crecerá con cada nueva obra y cada capítulo.</p>
-        <a href="/libros/">Ver la biblioteca <span aria-hidden="true">→</span></a>
+
+        <p>
+          Una colección que crecerá con
+          cada nueva obra y cada capítulo.
+        </p>
+
+        <a href={`${base}libros/`}>
+          Ver la biblioteca
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </article>
   </section>
 
   <section class="fl-quote" aria-label="Una frase para los lectores">
     <p>«Toda historia comienza con una palabra.»</p>
-    <span aria-hidden="true">─── ✦ ───</span>
+
+    <span aria-hidden="true">
+      ─── ✦ ───
+    </span>
+
     <strong>FRANK'S LITERATURE</strong>
   </section>
 </div>
